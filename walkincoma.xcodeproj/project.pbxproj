@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2147D841460947500966BF6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2147D831460947500966BF6 /* UIKit.framework */; };
+		D2147D861460947500966BF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2147D851460947500966BF6 /* Foundation.framework */; };
+		D2147D881460947500966BF6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2147D871460947500966BF6 /* CoreGraphics.framework */; };
+		D2147D8A1460947500966BF6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2147D891460947500966BF6 /* CoreData.framework */; };
+		D2147D901460947500966BF6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2147D8E1460947500966BF6 /* InfoPlist.strings */; };
+		D2147D921460947500966BF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2147D911460947500966BF6 /* main.m */; };
+		D2147D961460947500966BF6 /* WICAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2147D951460947500966BF6 /* WICAppDelegate.m */; };
+		D2147D991460947500966BF6 /* walkincoma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2147D971460947500966BF6 /* walkincoma.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D2147D7F1460947500966BF6 /* walkincoma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = walkincoma.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2147D831460947500966BF6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D2147D851460947500966BF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2147D871460947500966BF6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D2147D891460947500966BF6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D2147D8D1460947500966BF6 /* walkincoma-Info.plist */ = {isa = PBXFileReference; path = "walkincoma-Info.plist"; sourceTree = "<group>"; };
+		D2147D8F1460947500966BF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D2147D911460947500966BF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D2147D931460947500966BF6 /* walkincoma-Prefix.pch */ = {isa = PBXFileReference; path = "walkincoma-Prefix.pch"; sourceTree = "<group>"; };
+		D2147D941460947500966BF6 /* WICAppDelegate.h */ = {isa = PBXFileReference; path = WICAppDelegate.h; sourceTree = "<group>"; };
+		D2147D951460947500966BF6 /* WICAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WICAppDelegate.m; sourceTree = "<group>"; };
+		D2147D981460947500966BF6 /* walkincoma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = walkincoma.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2147D7C1460947500966BF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2147D841460947500966BF6 /* UIKit.framework in Frameworks */,
+				D2147D861460947500966BF6 /* Foundation.framework in Frameworks */,
+				D2147D881460947500966BF6 /* CoreGraphics.framework in Frameworks */,
+				D2147D8A1460947500966BF6 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2147D741460947500966BF6 = {
+			isa = PBXGroup;
+			children = (
+				D2147D8B1460947500966BF6 /* walkincoma */,
+				D2147D821460947500966BF6 /* Frameworks */,
+				D2147D801460947500966BF6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2147D801460947500966BF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2147D7F1460947500966BF6 /* walkincoma.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2147D821460947500966BF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2147D831460947500966BF6 /* UIKit.framework */,
+				D2147D851460947500966BF6 /* Foundation.framework */,
+				D2147D871460947500966BF6 /* CoreGraphics.framework */,
+				D2147D891460947500966BF6 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2147D8B1460947500966BF6 /* walkincoma */ = {
+			isa = PBXGroup;
+			children = (
+				D2147D941460947500966BF6 /* WICAppDelegate.h */,
+				D2147D951460947500966BF6 /* WICAppDelegate.m */,
+				D2147D971460947500966BF6 /* walkincoma.xcdatamodeld */,
+				D2147D8C1460947500966BF6 /* Supporting Files */,
+			);
+			path = walkincoma;
+			sourceTree = "<group>";
+		};
+		D2147D8C1460947500966BF6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2147D8D1460947500966BF6 /* walkincoma-Info.plist */,
+				D2147D8E1460947500966BF6 /* InfoPlist.strings */,
+				D2147D911460947500966BF6 /* main.m */,
+				D2147D931460947500966BF6 /* walkincoma-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2147D7E1460947500966BF6 /* walkincoma */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2147D9C1460947500966BF6 /* Build configuration list for PBXNativeTarget "walkincoma" */;
+			buildPhases = (
+				D2147D7B1460947500966BF6 /* Sources */,
+				D2147D7C1460947500966BF6 /* Frameworks */,
+				D2147D7D1460947500966BF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = walkincoma;
+			productName = walkincoma;
+			productReference = D2147D7F1460947500966BF6 /* walkincoma.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2147D761460947500966BF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = D2147D791460947500966BF6 /* Build configuration list for PBXProject "walkincoma" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D2147D741460947500966BF6;
+			productRefGroup = D2147D801460947500966BF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2147D7E1460947500966BF6 /* walkincoma */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2147D7D1460947500966BF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2147D901460947500966BF6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2147D7B1460947500966BF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2147D921460947500966BF6 /* main.m in Sources */,
+				D2147D961460947500966BF6 /* WICAppDelegate.m in Sources */,
+				D2147D991460947500966BF6 /* walkincoma.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D2147D8E1460947500966BF6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2147D8F1460947500966BF6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2147D9A1460947500966BF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D2147D9B1460947500966BF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2147D9D1460947500966BF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "walkincoma/walkincoma-Prefix.pch";
+				INFOPLIST_FILE = "walkincoma/walkincoma-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D2147D9E1460947500966BF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "walkincoma/walkincoma-Prefix.pch";
+				INFOPLIST_FILE = "walkincoma/walkincoma-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2147D791460947500966BF6 /* Build configuration list for PBXProject "walkincoma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2147D9A1460947500966BF6 /* Debug */,
+				D2147D9B1460947500966BF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2147D9C1460947500966BF6 /* Build configuration list for PBXNativeTarget "walkincoma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2147D9D1460947500966BF6 /* Debug */,
+				D2147D9E1460947500966BF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D2147D971460947500966BF6 /* walkincoma.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D2147D981460947500966BF6 /* walkincoma.xcdatamodel */,
+			);
+			currentVersion = D2147D981460947500966BF6 /* walkincoma.xcdatamodel */;
+			path = walkincoma.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D2147D761460947500966BF6 /* Project object */;
+}
