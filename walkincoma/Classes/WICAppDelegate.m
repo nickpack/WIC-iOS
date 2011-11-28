@@ -7,6 +7,13 @@
 //
 
 #import "WICAppDelegate.h"
+#import "WICWebController.h"
+#import "NewsView.h"
+#import "VideosView.h"
+#import "PhotosView.h"
+#import "NewsItemView.h"
+#import "WICTabBarController.h"
+#import "WICStylesheet.h"
 
 @implementation WICAppDelegate
 
@@ -26,10 +33,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    [TTStyleSheet setGlobalStyleSheet:[[[WICStylesheet alloc] init] autorelease]];
+    TTNavigator* navigator = [TTNavigator navigator];
+	navigator.persistenceMode = TTNavigatorPersistenceModeAll;
+    
+	TTURLMap* map = navigator.URLMap;
+    
+	[map from:@"*" toViewController:[WICWebController class]];
+    [map from:@"wic://tabBar" toSharedViewController:[WICTabBarController class]];
+    [map from:@"wic://news" toViewController:[NewsView class]];
+	[map from:@"wic://videos" toViewController:[VideosView class]];
+	[map from:@"wic://photos" toViewController:[PhotosView class]];
+	[map from:@"wic://viewnews" toViewController:[NewsItemView class]];
+    
+    if (![navigator restoreViewControllers]) {
+		[navigator openURLAction:[TTURLAction actionWithURLPath:@"wic://tabBar"]];
+	}
+    
+    return YES;
+}
+
+- (BOOL)application:(UIApplication*)application handleOpenURL:(NSURL*)URL {
+    [[TTNavigator navigator] openURLAction:[TTURLAction actionWithURLPath:URL.absoluteString]];
     return YES;
 }
 
