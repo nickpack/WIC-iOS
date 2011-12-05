@@ -10,4 +10,6 @@
 
 @interface WICTabBarController : UITabBarController
 
+-(void) addCenterButtonWithImage:(UIImage*)buttonImage highlightImage:(UIImage*)highlightImage;
+
 @end

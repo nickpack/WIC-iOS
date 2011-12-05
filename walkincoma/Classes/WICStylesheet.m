@@ -11,11 +11,36 @@
 @implementation WICStylesheet
 
 - (UIColor*)navigationBarTintColor {
-	return RGBCOLOR(0, 10, 10);
+	return RGBCOLOR(44, 44, 44);
+}
+
+-(UIColor*)tabBarTintColor {
+	return RGBCOLOR(72,72,72);
+}
+
+- (UIFont*)font {
+	return [UIFont fontWithName:@"AmericanTypewriter" size:14];
 }
 
 - (UIColor*)toolbarTintColor {
-	return RGBCOLOR(0, 10, 10);
+	return RGBCOLOR(72,72,72);
 }
+
+- (UIColor*)tableHeaderTintColor {
+	return RGBCOLOR(72,72,72);
+}
+
+- (UIColor*)tableHeaderTextColor {
+	return [UIColor whiteColor];
+}
+
+- (UIColor*)tableSubTextColor {
+	return [UIColor grayColor];
+}
+
+- (UITableViewCellSelectionStyle)tableSelectionStyle {
+	return UITableViewCellSelectionStyleGray;
+}
+
 
 @end

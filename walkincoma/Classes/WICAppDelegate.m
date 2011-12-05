@@ -46,9 +46,9 @@
 	[map from:@"wic://photos" toViewController:[PhotosView class]];
 	[map from:@"wic://viewnews" toViewController:[NewsItemView class]];
     
-    if (![navigator restoreViewControllers]) {
+    //if (![navigator restoreViewControllers]) {
 		[navigator openURLAction:[TTURLAction actionWithURLPath:@"wic://tabBar"]];
-	}
+	//}
     
     return YES;
 }

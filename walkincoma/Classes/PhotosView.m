@@ -17,13 +17,14 @@ static CGFloat kThumbnailRowHeight = 79.0f;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-        self.title = @"Photos";
         self.statusBarStyle = UIStatusBarStyleBlackTranslucent;
         self.navigationBarStyle = UIBarStyleBlackTranslucent;
         self.navigationBarTintColor = nil;
         self.wantsFullScreenLayout = YES;
         self.hidesBottomBarWhenPushed = NO;
-        //self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Packages",nil) image:image tag:0] autorelease];
+        self.title = NSLocalizedString(@"Photos",nil);
+        UIImage* image = [[UIImage imageNamed:@"Photos.png"] autorelease];
+        self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Photos",nil) image:image tag:0] autorelease];
     }
     
     return self;

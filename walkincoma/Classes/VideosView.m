@@ -19,8 +19,9 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		self.variableHeightRows = YES;
-		self.title = @"Videos";
-        //self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Packages",nil) image:image tag:0] autorelease];
+		self.title = NSLocalizedString(@"Videos",nil);
+        UIImage* image = [[UIImage imageNamed:@"Videos.png"] autorelease];
+        self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Videos",nil) image:image tag:0] autorelease];
 	}
 
 	return self;

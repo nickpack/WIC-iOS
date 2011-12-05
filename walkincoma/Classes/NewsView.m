@@ -19,9 +19,10 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 	if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-		self.title = @"News";
 		self.variableHeightRows = YES;
-        //self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Packages",nil) image:image tag:0] autorelease];
+        self.title = NSLocalizedString(@"News",nil);
+        UIImage* image = [[UIImage imageNamed:@"News.png"] autorelease];
+        self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"News",nil) image:image tag:0] autorelease];
 	}
 
 	return self;
