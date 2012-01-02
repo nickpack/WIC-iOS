@@ -11,6 +11,9 @@
 #import <Three20UI/UIViewAdditions.h>
 #import "TTTableViewDelegate+URLAdditions.h"
 
+static NSString* kLoremIpsum = @"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do\
+eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud\
+exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -23,14 +26,24 @@
         self.title = NSLocalizedString(@"News",nil);
         UIImage* image = [[UIImage imageNamed:@"News.png"] autorelease];
         self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"News",nil) image:image tag:0] autorelease];
+        CGRect applicationFrame = [UIScreen mainScreen].applicationFrame;
+        _listTabs = [[TTTabStrip alloc] initWithFrame:CGRectMake(0, _listTabs.bottom, applicationFrame.size.width, 40)];
+        _listTabs.tabItems = [NSArray arrayWithObjects:
+                              [[[TTTabItem alloc] initWithTitle:NSLocalizedString(@"News",nil)] autorelease],
+                              [[[TTTabItem alloc] initWithTitle:NSLocalizedString(@"Shows",nil)] autorelease],
+                              nil];
+        _listTabs.delegate = self;
+        _listTabs.contentMode = UIViewContentModeScaleToFill;
+        self.tableView.tableHeaderView = _listTabs;
 	}
 
 	return self;
 }
 
 - (void)createModel {
-	self.dataSource = [[[NewsDataSource alloc]
-						initWithFeedUrl:@"http://www.walkincoma.co.uk/feed"] autorelease];
+	self.title = NSLocalizedString(@"News",nil);
+    self.dataSource = [[[NewsDataSource alloc]
+                        initWithFeedUrl:@"http://www.walkincoma.co.uk/category/blogs/feed/"] autorelease];
 }
 
 - (id<UITableViewDelegate>)createDelegate {
@@ -40,6 +53,21 @@
 -(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	return YES;
 }
+
+- (void)tabBar:(TTTabBar*)tabBar tabSelected:(NSInteger)selectedIndex {
+    [self invalidateModel];
+    if (selectedIndex == 1) {
+        self.title = NSLocalizedString(@"Shows",nil);
+        self.dataSource = [[[NewsDataSource alloc]
+                            initWithFeedUrl:@"http://www.walkincoma.co.uk/category/shows/feed/"] autorelease];
+        
+    } else {
+        self.title = NSLocalizedString(@"News",nil);
+        self.dataSource = [[[NewsDataSource alloc]
+                            initWithFeedUrl:@"http://www.walkincoma.co.uk/category/blogs/feed/"] autorelease];
+    }
+}
+
 
 @end
 

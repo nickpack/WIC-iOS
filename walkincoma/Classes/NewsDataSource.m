@@ -33,23 +33,49 @@
 	return _feedModel;
 }
 
-- (void)tableViewDidLoadModel:(UITableView*)tableView {
-	NSMutableArray* items = [[NSMutableArray alloc] init];
+NSComparisonResult dateSort(NSString *s1, NSString *s2, void *context) {
+    NSDateFormatter* fmt1 = [[NSDateFormatter alloc] init];
+    [fmt1 setDateFormat:@"dd/MM/yyyy"];
+    NSDate *d1 = [fmt1 dateFromString:s1];
+    NSDate *d2 = [fmt1 dateFromString:s2];
+    [fmt1 release];
+    return [d1 compare:d2];
+}
 
-	for (FeedItem* item in _feedModel.items) {
-		NSString *avatar = [[item.poster stringByReplacingOccurrencesOfRegex:@"\\W+"
-																   withString:@""]
-																	lowercaseString];
+- (void)tableViewDidLoadModel:(UITableView*)tableView {
+    
+    self.items = [NSMutableArray array];
+    self.sections = [NSMutableArray array];
+    
+    NSMutableDictionary* groups = [NSMutableDictionary dictionary];
+    
+    
+    
+    for (FeedItem* item in _feedModel.items) {
+        
+        NSDateFormatter* fmt1 = [[NSDateFormatter alloc] init];
+        [fmt1 setDateFormat:@"MM/yyyy"];
+        NSString* headerDate = [fmt1 stringFromDate: item.posted];
+        
+        NSMutableArray* section = [groups objectForKey:headerDate];
+        if (!section) {
+            section = [NSMutableArray array];
+            [groups setObject:section forKey:headerDate];
+        }
+        TTTableItem* row;
+        NSString *avatar = [[item.poster stringByReplacingOccurrencesOfRegex:@"\\W+"
+                                                                  withString:@""]
+                            lowercaseString];
 		NSString *avatarUrl;
-		if (![avatar isEqualToString:@"tom"] && ![avatar isEqualToString:@"nickpack"] && ![avatar isEqualToString:@"tobygore"] && ![avatar isEqualToString:@"meatarm"]) {
+		if (![avatar isEqualToString:@"tom"] && ![avatar isEqualToString:@"nick"] && ![avatar isEqualToString:@"alex"] && ![avatar isEqualToString:@"mark"]) {
 			avatarUrl = @"bundle://news-nobg.png";
 		} else {
-			avatarUrl = [NSString stringWithFormat:@"http://app.thenursewholovedme.com/nickpack.jpg", avatar];
+			avatarUrl = [NSString stringWithFormat:@"http://app.walkincoma.co.uk/%@.jpg", avatar];
 		}
-
+        
 		NSString* body = [item.description stringByRemovingHTMLTags];
 		body = [body stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-		TTTableMessageItem* tableRow = [TTTableMessageItem itemWithTitle:item.title caption:[NSString stringWithFormat:@"Posted by: %@",item.poster]
+		row = [TTTableMessageItem itemWithTitle:item.title caption:[NSString stringWithFormat:@"Posted by: %@",item.poster]
 																	text:body timestamp:item.posted
 																imageURL:avatarUrl URL:@"wic://viewnews"];
 		NSDictionary* rowInfo = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -64,34 +90,46 @@
 								 item.link,
 								 @"original",
 								 nil];
-		tableRow.userInfo = rowInfo;
-		[items addObject:tableRow];
-	}
-
-	self.items = items;
-
-	TT_RELEASE_SAFELY(items);
+		row.userInfo = rowInfo;        
+        [section addObject:row];
+        
+    }
+    
+    NSArray* types = [groups.allKeys sortedArrayUsingComparator:^(id obj1, id obj2)
+                      {
+                          NSDateFormatter* fmt1 = [[NSDateFormatter alloc] init];
+                          [fmt1 setDateFormat:@"MM/yyyy"];
+                          NSDate *d1 = [fmt1 dateFromString:obj1];
+                          NSDate *d2 = [fmt1 dateFromString:obj2];
+                          [fmt1 release];
+                          return [d2 compare:d1];
+                      }];
+    for (NSString* type in types) {
+        NSArray* items = [groups objectForKey:type];
+        [_sections addObject:type];
+        [_items addObject:items];
+    }
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString*)titleForLoading:(BOOL)reloading {
     if (reloading) {
-        return NSLocalizedString(@"Updating News Feed...", @"News feed updating text");
+        return NSLocalizedString(@"Updating Feed...", @"News feed updating text");
     } else {
-        return NSLocalizedString(@"Loading News Feed...", @"News feed loading text");
+        return NSLocalizedString(@"Loading Feed...", @"News feed loading text");
     }
 }
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString*)titleForEmpty {
-    return NSLocalizedString(@"No news articles found.", @"News feed no results");
+    return NSLocalizedString(@"No articles found.", @"News feed no results");
 }
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString*)subtitleForError:(NSError*)error {
-    return NSLocalizedString(@"Sorry, there was an error loading the News Feed.", @"");
+    return NSLocalizedString(@"Sorry, there was an error loading the Feed.", @"");
 }
 
 

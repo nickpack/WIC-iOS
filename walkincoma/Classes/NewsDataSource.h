@@ -10,10 +10,11 @@
 
 @class FeedModel;
 
-@interface NewsDataSource : TTListDataSource {
+@interface NewsDataSource : TTSectionedDataSource {
 	FeedModel* _feedModel;
 }
 
 - (id)initWithFeedUrl:(NSString*)feedUrl;
+NSComparisonResult dateSort(NSString *s1, NSString *s2, void *context);
 
 @end

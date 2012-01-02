@@ -11,7 +11,8 @@
 
 @interface FeedItem : NSObject {
 	NSDate*   _posted;
-	NSString* _title;
+	NSString* _ts;
+    NSString* _title;
 	NSString* _body;
 	NSString* _link;
 	NSString* _poster;
@@ -19,6 +20,7 @@
 }
 
 @property (nonatomic, retain) NSDate* posted;
+@property (nonatomic, copy)   NSString* ts;
 @property (nonatomic, copy)   NSString* title;
 @property (nonatomic, copy)   NSString* body;
 @property (nonatomic, copy)   NSString* link;

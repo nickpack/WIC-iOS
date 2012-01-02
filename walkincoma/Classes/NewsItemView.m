@@ -8,6 +8,9 @@
 
 #import "NewsItemView.h"
 #import "Three20/Three20+Additions.h"
+#import <Three20Core/NSDateAdditions.h>
+#import <Three20Core/NSStringAdditions.h>
+#import "RegexKitLite.h"
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -17,10 +20,11 @@
 
 - (id)initWithNavigatorURL:(NSURL *)URL query:(NSDictionary *)query {
     if (self = [self initWithNibName:nil bundle:nil]) {
-		self.title = [query objectForKey:@"title"];
-		self.article = query;
+		//self.title = [query objectForKey:@"title"];
+		//self.title = @"Article Viewer";
+        self.article = query;
 		self.variableHeightRows = YES;
-		self.tableViewStyle = UITableViewStyleGrouped;
+		//self.tableViewStyle = UITableViewStyleGrouped;
 		self.tableView.autoresizesSubviews = YES;
 	}
     return self;
@@ -28,32 +32,33 @@
 
 
 - (void) createModel {
-	TTTableCaptionItem* timestamp = [TTTableCaptionItem
-									itemWithText:[[self.article objectForKey:@"timestamp"] formatRelativeTime]
-									caption: @"Posted"
-									URL: nil];
+    
+    NSString *avatar = [[[self.article objectForKey:@"postedBy"] stringByReplacingOccurrencesOfRegex:@"\\W+"
+                                                              withString:@""]
+                        lowercaseString];
+    NSString *avatarUrl;
+    if (![avatar isEqualToString:@"tom"] && ![avatar isEqualToString:@"nick"] && ![avatar isEqualToString:@"alex"] && ![avatar isEqualToString:@"mark"]) {
+        avatarUrl = @"bundle://news-nobg.png";
+    } else {
+        avatarUrl = [NSString stringWithFormat:@"http://app.walkincoma.co.uk/%@.jpg", avatar];
+    }
+    
 	TTStyledText* text = [TTStyledText textFromXHTML:[self.article objectForKey:@"articleBody"] lineBreaks:YES URLs:YES];
 	TTTableStyledTextItem* articleBody = [TTTableStyledTextItem itemWithText:text URL:nil];
-	TTTableCaptionItem* postedBy = [TTTableCaptionItem
-								  itemWithText:[self.article objectForKey:@"postedBy"]
-								  caption: @"Posted by"
-								  URL: nil];
-	NSArray* info = [NSArray arrayWithObjects:timestamp,articleBody,postedBy,nil];
-	NSArray* links = [NSArray arrayWithObject:[TTTableButton itemWithText:@"View Original Article" URL:[self.article objectForKey:@"original"]]];
-	self.dataSource = [[TTSectionedDataSource alloc] initWithItems:[NSArray arrayWithObjects:info, links, nil] sections:[NSArray arrayWithObjects:[self.article objectForKey:@"title"], @"", nil]];
-
-	timestamp = nil;
-	text = nil;
-	articleBody = nil;
-	postedBy = nil;
-	info = nil;
-	links = nil;
-	[timestamp dealloc];
-	[text dealloc];
-	[articleBody dealloc];
-	[postedBy dealloc];
-	[info dealloc];
-	[links dealloc];
+    
+    NSString* dateAndBy = [NSString stringWithFormat:@"%@: %@", [self.article objectForKey:@"postedBy"], [[self.article objectForKey:@"timestamp"] formatRelativeTime]];
+    
+	TTTableSubtitleItem* postedBy = [TTTableSubtitleItem 
+                                     itemWithText:[self.article objectForKey:@"title"]
+                                     subtitle:dateAndBy
+                                     imageURL:avatarUrl 
+                                     defaultImage:nil
+                                     URL:nil 
+                                     accessoryURL:nil];
+    TTTableButton* viewOriginal = [TTTableButton itemWithText:@"View Original Article" URL:[self.article objectForKey:@"original"]];
+	NSArray* info = [NSArray arrayWithObjects:postedBy,articleBody,viewOriginal,nil];
+	
+	self.dataSource = [[TTSectionedDataSource alloc] initWithItems:[NSArray arrayWithObjects:info, nil] sections:[NSArray arrayWithObjects:@"", nil]];
 }
 
 - (BOOL)persistView:(NSMutableDictionary*)state {

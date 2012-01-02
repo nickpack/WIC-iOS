@@ -6,7 +6,8 @@
 //  Copyright 2010 Nikki James Pack. All rights reserved.
 //
 #import "TTTableViewDelegate+URLAdditions.h"
-@interface NewsView : TTTableViewController {
+@interface NewsView : TTTableViewController <TTTabDelegate> {
+    TTTabStrip* _listTabs;
 }
 
 @end

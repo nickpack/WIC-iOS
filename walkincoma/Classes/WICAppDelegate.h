@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WICAppDelegate : UIResponder <UIApplicationDelegate>
+@interface WICAppDelegate : UIResponder <UIApplicationDelegate> {
+    BOOL shouldOpenStream;
+	BOOL uiIsVisible;
+}
 
+@property (nonatomic) BOOL				uiIsVisible;
+@property (nonatomic) BOOL				shouldOpenStream;
 @property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;

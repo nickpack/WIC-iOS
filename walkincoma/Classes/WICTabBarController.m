@@ -14,12 +14,21 @@
     self.customizableViewControllers = nil;
 
     [self setTabURLs:[NSArray arrayWithObjects:@"wic://news",
+                      @"wic://audio",
                       @"wic://videos",
-                      @"wic://news",
                       @"wic://photos",
-                      @"wic://news",
                       nil]];
-    [self addCenterButtonWithImage:[UIImage imageNamed:@"Play-off.png"] highlightImage:[UIImage imageNamed:@"Play.png"]];
+    
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tabbar.png"]];
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] > 4.9) {
+        [self.tabBar insertSubview:backgroundImageView atIndex:1];
+    } else {
+        [self.tabBar insertSubview:backgroundImageView atIndex:0];
+    }
+    
+    [backgroundImageView release];
+    /*[self addCenterButtonWithImage:[UIImage imageNamed:@"Play-off.png"] highlightImage:[UIImage imageNamed:@"Play.png"]];*/
 }
 
 -(void) addCenterButtonWithImage:(UIImage*)buttonImage highlightImage:(UIImage*)highlightImage

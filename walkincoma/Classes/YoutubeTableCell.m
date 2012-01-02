@@ -38,7 +38,7 @@ const CGFloat    kYouTubeCellWidth = 100;
 
 	CGFloat innerWidth = cv.width - ((kTableCellHPadding * 4) + kYouTubeCellWidth);
 	CGFloat innerHeight = cv.height;
-
+    self.textLabel.font = [UIFont fontWithName:@"AmericanTypewriter-Bold" size:16];
 	self.textLabel.frame = CGRectMake((kTableCellHPadding * 2) + kYouTubeCellWidth, 0,
 									  innerWidth, innerHeight);
 

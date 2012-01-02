@@ -16,6 +16,7 @@ static CGFloat kThumbnailRowHeight = 79.0f;
 @implementation PhotosView
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
         self.statusBarStyle = UIStatusBarStyleBlackTranslucent;
         self.navigationBarStyle = UIBarStyleBlackTranslucent;

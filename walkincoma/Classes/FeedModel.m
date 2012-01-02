@@ -66,6 +66,7 @@
 		FeedItem* item = [[FeedItem alloc] init];
 		NSDate* date = [dateFormatter dateFromString:[[entry objectForKey:@"pubDate"] objectForXMLNode]];
 		item.posted = date;
+        item.ts = [[entry objectForKey:@"pubDate"] objectForXMLNode];
 		item.title = [[entry objectForKey:@"title"] objectForXMLNode];
 		item.body = [[entry objectForKey:@"content:encoded"] objectForXMLNode];
 		item.link = [[entry objectForKey:@"link"] objectForXMLNode];
