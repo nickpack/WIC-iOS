@@ -58,7 +58,7 @@
     TTTableButton* viewOriginal = [TTTableButton itemWithText:@"View Original Article" URL:[self.article objectForKey:@"original"]];
 	NSArray* info = [NSArray arrayWithObjects:postedBy,articleBody,viewOriginal,nil];
 	
-	self.dataSource = [[TTSectionedDataSource alloc] initWithItems:[NSArray arrayWithObjects:info, nil] sections:[NSArray arrayWithObjects:@"", nil]];
+	self.dataSource = [[[TTSectionedDataSource alloc] initWithItems:[NSArray arrayWithObjects:info, nil] sections:[NSArray arrayWithObjects:@"", nil]] autorelease];
 }
 
 - (BOOL)persistView:(NSMutableDictionary*)state {

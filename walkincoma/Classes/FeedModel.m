@@ -14,9 +14,20 @@
 
 @synthesize feedUrl = _feedUrl;
 @synthesize items = _items;
+@synthesize youTube = _youTube;
+
+// This should be a parameter on initWithFeedUrl but I dont have time to refactor
+- (id)initWithYoutubeUrl:(NSString*)feedUrl {
+	if ((self = [super init])) {
+		self.youTube = YES;
+        self.feedUrl = feedUrl;
+	}
+	return self;
+}
 
 - (id)initWithFeedUrl:(NSString*)feedUrl {
 	if ((self = [super init])) {
+        self.youTube = NO;
 		self.feedUrl = feedUrl;
 	}
 	return self;
@@ -63,15 +74,22 @@
 	NSMutableArray* items = [[NSMutableArray alloc] initWithCapacity:[entries count]];
 
 	for (NSDictionary* entry in entries) {
-		FeedItem* item = [[FeedItem alloc] init];
+        FeedItem* item = [[FeedItem alloc] init];
 		NSDate* date = [dateFormatter dateFromString:[[entry objectForKey:@"pubDate"] objectForXMLNode]];
 		item.posted = date;
         item.ts = [[entry objectForKey:@"pubDate"] objectForXMLNode];
 		item.title = [[entry objectForKey:@"title"] objectForXMLNode];
 		item.body = [[entry objectForKey:@"content:encoded"] objectForXMLNode];
-		item.link = [[entry objectForKey:@"link"] objectForXMLNode];
 		item.poster = [[entry objectForKey:@"dc:creator"] objectForXMLNode];
 		item.description = [[entry objectForKey:@"description"] objectForXMLNode];
+        item.link = [[entry objectForKey:@"link"] objectForXMLNode];
+        if (self.youTube) {
+            item.thumb = [[[[entry objectForKey:@"media:group"] objectForKey:@"media:thumbnail"] objectAtIndex:0] objectForKey:@"url"];
+        }    /*item.link = [[[[entry objectForKey:@"media:group"] objectForKey:@"media:content"] objectAtIndex:0] objectForKey:@"url"];
+        } else {
+            item.link = [[entry objectForKey:@"link"] objectForXMLNode];
+        }*/
+        
 		[items addObject:item];
 		TT_RELEASE_SAFELY(item);
 	}

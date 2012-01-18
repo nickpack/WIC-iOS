@@ -16,7 +16,7 @@
 #import <UIKit/UIKit.h>
 #else
 #import <Cocoa/Cocoa.h>
-#endif TARGET_OS_IPHONE	
+#endif
 
 #include <pthread.h>
 #include <AudioToolbox/AudioToolbox.h>
@@ -194,7 +194,6 @@ extern NSString * const ASUpdateMetadataNotification;
 - (float)averagePowerForChannel:(NSUInteger)channelNumber;
 
 @end
-
 
 
 

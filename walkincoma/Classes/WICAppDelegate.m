@@ -7,6 +7,7 @@
 //
 
 #import "WICAppDelegate.h"
+#import "UINavigationBar+StyleHaxx.h"
 #import "WICWebController.h"
 #import "NewsView.h"
 #import "VideosView.h"
@@ -37,6 +38,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[TTURLRequestQueue mainQueue] setMaxContentLength:0];
     [TTStyleSheet setGlobalStyleSheet:[[[WICStylesheet alloc] init] autorelease]];
     TTNavigator* navigator = [TTNavigator navigator];
 	navigator.persistenceMode = TTNavigatorPersistenceModeNone;
@@ -51,9 +53,9 @@
 	[map from:@"wic://viewnews" toViewController:[NewsItemView class]];
     [map from:@"wic://audio" toViewController:[AudioPlayer class]];
     
-    /*if ([[UINavigationBar class]respondsToSelector:@selector(appearance)]) {
-        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"tabbar.png"] forBarMetrics:UIBarMetricsDefault];
-    }*/
+    if ([[UINavigationBar class]respondsToSelector:@selector(appearance)]) {
+        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
+    }
     
     if (![navigator restoreViewControllers]) {
 		[navigator openURLAction:[TTURLAction actionWithURLPath:@"wic://tabBar"]];

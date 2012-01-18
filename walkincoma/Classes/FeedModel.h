@@ -12,11 +12,14 @@
 @interface FeedModel : TTURLRequestModel {
 	NSString* _feedUrl;
 	NSArray*  _items;
+    BOOL      _youTube;
 }
 
+@property (nonatomic)           BOOL      youTube;
 @property (nonatomic, copy)     NSString* feedUrl;
 @property (nonatomic, readonly) NSArray*  items;
 
 - (id)initWithFeedUrl:(NSString*)feedUrl;
+- (id)initWithYoutubeUrl:(NSString*)feedUrl;
 
 @end

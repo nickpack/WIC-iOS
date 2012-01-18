@@ -17,6 +17,7 @@
 	NSString* _link;
 	NSString* _poster;
 	NSString* _description;
+    NSString* _thumb;
 }
 
 @property (nonatomic, retain) NSDate* posted;
@@ -26,5 +27,6 @@
 @property (nonatomic, copy)   NSString* link;
 @property (nonatomic, copy)   NSString* poster;
 @property (nonatomic, copy)	  NSString* description;
+@property (nonatomic, copy)	  NSString* thumb;
 
 @end

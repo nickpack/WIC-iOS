@@ -97,7 +97,7 @@
     
 	[self destroyStreamer];
     
-	NSURL *url = [NSURL URLWithString:@"http://app.thenursewholovedme.com:9000"];
+	NSURL *url = [NSURL URLWithString:@"http://stream.walkincoma.co.uk:9000"];
 	streamer = [[AudioStreamer alloc] initWithURL:url];
     [[NSNotificationCenter defaultCenter]
 	 addObserver:self
@@ -414,6 +414,21 @@
 		default:
 			break;
 	}
+    
+    NSNotification *notification =
+	[NSNotification
+	 notificationWithName:ASStatusChangedNotification
+	 object:self];
+	[[NSNotificationCenter defaultCenter]
+	 postNotification:notification];
+    
+    NSNotification *notification2 =
+	[NSNotification
+	 notificationWithName:ASUpdateMetadataNotification
+	 object:self];
+	[[NSNotificationCenter defaultCenter]
+	 postNotification:notification2];
+   
 }
 
 @end

@@ -17,11 +17,11 @@
 @synthesize title = _title;
 
 - (id)init {
-	_title = @"Photos";
-    //self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Packages",nil) image:image tag:0] autorelease];
-	//[[TTURLCache sharedCache] setMaxPixelCount:(240 * 240 * 8)];
-	page = 1;
-    responseProcessor = [[PhotoResponse alloc] init];
+	if ((self = [super init])) {
+        _title = @"Photos";
+        page = 1;
+        responseProcessor = [[PhotoResponse alloc] init];
+    }
 	return self;
 }
 

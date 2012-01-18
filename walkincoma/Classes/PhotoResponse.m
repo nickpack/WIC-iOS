@@ -16,7 +16,9 @@
 @synthesize objects, totalObjectsAvailableOnServer;
 
 - (id)init {
-	objects = [[NSMutableArray alloc] init];
+	if ((self = [super init])) {
+        objects = [[NSMutableArray alloc] init];
+    }
 	return self;
 }
 
@@ -44,7 +46,6 @@
 
 		NSDictionary* feed = [parser.rootObject retain];
 
-
 		NSDictionary *root = [feed objectForKey:@"photos"];
 		self.totalObjectsAvailableOnServer = [[root objectForKey:@"total"] integerValue];
 
@@ -59,6 +60,8 @@
 				[self.objects addObject:photo];
 				[photo release];
 		}
+        
+        [feed release];
 	}
 
 	return nil;

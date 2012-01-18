@@ -18,6 +18,7 @@
 @synthesize link = _link;
 @synthesize poster = _poster;
 @synthesize description = _description;
+@synthesize thumb = _thumb;
 
 - (void) dealloc {
 	TT_RELEASE_SAFELY(_posted);
@@ -27,6 +28,7 @@
 	TT_RELEASE_SAFELY(_link);
 	TT_RELEASE_SAFELY(_poster);
 	TT_RELEASE_SAFELY(_description);
+    TT_RELEASE_SAFELY(_thumb);
 	[super dealloc];
 }
 

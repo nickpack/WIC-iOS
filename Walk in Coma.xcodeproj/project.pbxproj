@@ -60,13 +60,12 @@
 		D2538BF31483AFC600A961D8 /* YouTubeTextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D2538BE21483AFC600A961D8 /* YouTubeTextItem.m */; };
 		D26E810114AE6AA900F2ADCF /* tile.png in Resources */ = {isa = PBXBuildFile; fileRef = D26E810014AE6AA900F2ADCF /* tile.png */; };
 		D26E810314AE70D400F2ADCF /* tabbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D26E810214AE70D400F2ADCF /* tabbar@2x.png */; };
-		D26E810A14AE794600F2ADCF /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = D26E810414AE794600F2ADCF /* Icon-72.png */; };
-		D26E810B14AE794600F2ADCF /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D26E810514AE794600F2ADCF /* Icon-Small-50.png */; };
-		D26E810C14AE794600F2ADCF /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = D26E810614AE794600F2ADCF /* Icon-Small.png */; };
-		D26E810D14AE794600F2ADCF /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D26E810714AE794600F2ADCF /* Icon-Small@2x.png */; };
 		D26E811114AE796100F2ADCF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D26E811014AE796100F2ADCF /* Icon@2x.png */; };
 		D26E811314AE796C00F2ADCF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D26E811214AE796C00F2ADCF /* Icon.png */; };
 		D2786B4D146188DE0047FFBC /* WICStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = D2786B4C146188DE0047FFBC /* WICStylesheet.m */; };
+		D27D4B4B14B4F63100C02C78 /* UINavigationBar+StyleHaxx.m in Sources */ = {isa = PBXBuildFile; fileRef = D27D4B4A14B4F63100C02C78 /* UINavigationBar+StyleHaxx.m */; };
+		D27D4B4E14B4FB8200C02C78 /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = D27D4B4C14B4FB8200C02C78 /* navbar.png */; };
+		D27D4B4F14B4FB8200C02C78 /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D27D4B4D14B4FB8200C02C78 /* navbar@2x.png */; };
 		D2A75DD91460994A00FDB105 /* WICWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A75DD81460994A00FDB105 /* WICWebController.m */; };
 		D2A75EF71460A0B800FDB105 /* WICTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A75EF61460A0B800FDB105 /* WICTabBarController.m */; };
 		D2D377DF148907A800A3F3FA /* Videos.png in Resources */ = {isa = PBXBuildFile; fileRef = D2D377DD148907A800A3F3FA /* Videos.png */; };
@@ -259,14 +258,14 @@
 		320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Style.xcodeproj; path = libs/three20/src/Three20Style/Three20Style.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = libs/three20/src/Three20/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UI.xcodeproj; path = libs/three20/src/Three20UI/Three20UI.xcodeproj; sourceTree = SOURCE_ROOT; };
-		D2147D7F1460947500966BF6 /* Walk in Coma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Walk in Coma.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2147D7F1460947500966BF6 /* Walk In Coma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Walk In Coma.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2147D831460947500966BF6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D2147D851460947500966BF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2147D871460947500966BF6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D2147D891460947500966BF6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		D2147D8D1460947500966BF6 /* Walk in Coma-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Walk in Coma-Info.plist"; sourceTree = "<group>"; };
+		D2147D8D1460947500966BF6 /* Walk In Coma-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Walk In Coma-Info.plist"; sourceTree = "<group>"; };
 		D2147D8F1460947500966BF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D2147D931460947500966BF6 /* Walk in Coma-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Walk in Coma-Prefix.pch"; sourceTree = "<group>"; };
+		D2147D931460947500966BF6 /* Walk In Coma-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Walk In Coma-Prefix.pch"; sourceTree = "<group>"; };
 		D2147D981460947500966BF6 /* walkincoma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = walkincoma.xcdatamodel; sourceTree = "<group>"; };
 		D240A8EA14B1099D00B5FF9F /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioPlayer.h; path = Classes/AudioPlayer.h; sourceTree = "<group>"; };
 		D240A8EB14B1099D00B5FF9F /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioPlayer.m; path = Classes/AudioPlayer.m; sourceTree = "<group>"; };
@@ -323,14 +322,14 @@
 		D2538BE21483AFC600A961D8 /* YouTubeTextItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YouTubeTextItem.m; path = Classes/YouTubeTextItem.m; sourceTree = "<group>"; };
 		D26E810014AE6AA900F2ADCF /* tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile.png; sourceTree = "<group>"; };
 		D26E810214AE70D400F2ADCF /* tabbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar@2x.png"; sourceTree = "<group>"; };
-		D26E810414AE794600F2ADCF /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "walkincoma/Icon-72.png"; sourceTree = "<group>"; };
-		D26E810514AE794600F2ADCF /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "walkincoma/Icon-Small-50.png"; sourceTree = "<group>"; };
-		D26E810614AE794600F2ADCF /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "walkincoma/Icon-Small.png"; sourceTree = "<group>"; };
-		D26E810714AE794600F2ADCF /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "walkincoma/Icon-Small@2x.png"; sourceTree = "<group>"; };
 		D26E811014AE796100F2ADCF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		D26E811214AE796C00F2ADCF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		D2786B4B146188DE0047FFBC /* WICStylesheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WICStylesheet.h; path = Classes/WICStylesheet.h; sourceTree = "<group>"; };
 		D2786B4C146188DE0047FFBC /* WICStylesheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WICStylesheet.m; path = Classes/WICStylesheet.m; sourceTree = "<group>"; };
+		D27D4B4914B4F63100C02C78 /* UINavigationBar+StyleHaxx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+StyleHaxx.h"; path = "Classes/UINavigationBar+StyleHaxx.h"; sourceTree = "<group>"; };
+		D27D4B4A14B4F63100C02C78 /* UINavigationBar+StyleHaxx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+StyleHaxx.m"; path = "Classes/UINavigationBar+StyleHaxx.m"; sourceTree = "<group>"; };
+		D27D4B4C14B4FB8200C02C78 /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar.png; sourceTree = "<group>"; };
+		D27D4B4D14B4FB8200C02C78 /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
 		D2A75DD71460994A00FDB105 /* WICWebController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WICWebController.h; path = Classes/WICWebController.h; sourceTree = "<group>"; };
 		D2A75DD81460994A00FDB105 /* WICWebController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WICWebController.m; path = Classes/WICWebController.m; sourceTree = "<group>"; };
 		D2A75EF51460A0B800FDB105 /* WICTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WICTabBarController.h; path = Classes/WICTabBarController.h; sourceTree = "<group>"; };
@@ -448,10 +447,6 @@
 			children = (
 				D240A92214B12E7500B5FF9F /* Default.png */,
 				D240A92014B12E6900B5FF9F /* Default@2x.png */,
-				D26E810414AE794600F2ADCF /* Icon-72.png */,
-				D26E810514AE794600F2ADCF /* Icon-Small-50.png */,
-				D26E810614AE794600F2ADCF /* Icon-Small.png */,
-				D26E810714AE794600F2ADCF /* Icon-Small@2x.png */,
 				D26E811214AE796C00F2ADCF /* Icon.png */,
 				D26E811014AE796100F2ADCF /* Icon@2x.png */,
 				D2147D8B1460947500966BF6 /* walkincoma */,
@@ -463,7 +458,7 @@
 		D2147D801460947500966BF6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2147D7F1460947500966BF6 /* Walk in Coma.app */,
+				D2147D7F1460947500966BF6 /* Walk In Coma.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -471,6 +466,7 @@
 		D2147D821460947500966BF6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				320AF8492C47A4D819F7C450 /* QuartzCore.framework */,
 				D240A90D14B1107B00B5FF9F /* CFNetwork.framework */,
 				D240A90B14B1102600B5FF9F /* SystemConfiguration.framework */,
 				D240A90914B1101300B5FF9F /* MediaPlayer.framework */,
@@ -481,7 +477,6 @@
 				320A737074758E53BA54BE90 /* Three20UINavigator.xcodeproj */,
 				320A2827FEC940B25BC42C60 /* Three20Core.xcodeproj */,
 				320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */,
-				320AF8492C47A4D819F7C450 /* QuartzCore.framework */,
 				320A5A189C235877202780D0 /* Three20Network.xcodeproj */,
 				320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */,
 				D2147D831460947500966BF6 /* UIKit.framework */,
@@ -540,6 +535,8 @@
 				D240A8EB14B1099D00B5FF9F /* AudioPlayer.m */,
 				D240A8EE14B10A7200B5FF9F /* AudioStreamer.h */,
 				D240A8EF14B10A7200B5FF9F /* AudioStreamer.m */,
+				D27D4B4914B4F63100C02C78 /* UINavigationBar+StyleHaxx.h */,
+				D27D4B4A14B4F63100C02C78 /* UINavigationBar+StyleHaxx.m */,
 			);
 			path = walkincoma;
 			sourceTree = "<group>";
@@ -550,9 +547,9 @@
 				D240A8F714B10AAB00B5FF9F /* AudioPlayer.xib */,
 				D2538BC61483AFC600A961D8 /* main.m */,
 				320B6C86F11D9990244A9730 /* Three20.bundle */,
-				D2147D8D1460947500966BF6 /* Walk in Coma-Info.plist */,
+				D2147D8D1460947500966BF6 /* Walk In Coma-Info.plist */,
 				D2147D8E1460947500966BF6 /* InfoPlist.strings */,
-				D2147D931460947500966BF6 /* Walk in Coma-Prefix.pch */,
+				D2147D931460947500966BF6 /* Walk In Coma-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -560,6 +557,8 @@
 		D2D377DC1489079500A3F3FA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D27D4B4C14B4FB8200C02C78 /* navbar.png */,
+				D27D4B4D14B4FB8200C02C78 /* navbar@2x.png */,
 				D240A91C14B128EC00B5FF9F /* music.png */,
 				D240A91D14B128ED00B5FF9F /* music@2x.png */,
 				D240A8F414B10AAB00B5FF9F /* loadingbutton@2x.png */,
@@ -584,9 +583,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D2147D7E1460947500966BF6 /* Walk in Coma */ = {
+		D2147D7E1460947500966BF6 /* Walk In Coma */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D2147D9C1460947500966BF6 /* Build configuration list for PBXNativeTarget "Walk in Coma" */;
+			buildConfigurationList = D2147D9C1460947500966BF6 /* Build configuration list for PBXNativeTarget "Walk In Coma" */;
 			buildPhases = (
 				D2147D7B1460947500966BF6 /* Sources */,
 				D2147D7C1460947500966BF6 /* Frameworks */,
@@ -604,9 +603,9 @@
 				320A5A189C235877202780D1 /* PBXTargetDependency */,
 				320CC833B8AF0ACFD35E6221 /* PBXTargetDependency */,
 			);
-			name = "Walk in Coma";
+			name = "Walk In Coma";
 			productName = walkincoma;
-			productReference = D2147D7F1460947500966BF6 /* Walk in Coma.app */;
+			productReference = D2147D7F1460947500966BF6 /* Walk In Coma.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -617,7 +616,7 @@
 			attributes = {
 				LastUpgradeCheck = 0420;
 			};
-			buildConfigurationList = D2147D791460947500966BF6 /* Build configuration list for PBXProject "Walk in Coma" */;
+			buildConfigurationList = D2147D791460947500966BF6 /* Build configuration list for PBXProject "Walk In Coma" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -663,7 +662,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				D2147D7E1460947500966BF6 /* Walk in Coma */,
+				D2147D7E1460947500966BF6 /* Walk In Coma */,
 			);
 		};
 /* End PBXProject section */
@@ -798,10 +797,6 @@
 				D2D377E8148909D200A3F3FA /* News@2x.png in Resources */,
 				D26E810114AE6AA900F2ADCF /* tile.png in Resources */,
 				D26E810314AE70D400F2ADCF /* tabbar@2x.png in Resources */,
-				D26E810A14AE794600F2ADCF /* Icon-72.png in Resources */,
-				D26E810B14AE794600F2ADCF /* Icon-Small-50.png in Resources */,
-				D26E810C14AE794600F2ADCF /* Icon-Small.png in Resources */,
-				D26E810D14AE794600F2ADCF /* Icon-Small@2x.png in Resources */,
 				D26E811114AE796100F2ADCF /* Icon@2x.png in Resources */,
 				D26E811314AE796C00F2ADCF /* Icon.png in Resources */,
 				D240A8FB14B10AAC00B5FF9F /* loadingbutton@2x.png in Resources */,
@@ -816,6 +811,8 @@
 				D240A91F14B128ED00B5FF9F /* music@2x.png in Resources */,
 				D240A92114B12E6A00B5FF9F /* Default@2x.png in Resources */,
 				D240A92314B12E7800B5FF9F /* Default.png in Resources */,
+				D27D4B4E14B4FB8200C02C78 /* navbar.png in Resources */,
+				D27D4B4F14B4FB8200C02C78 /* navbar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -849,6 +846,7 @@
 				D2538BF31483AFC600A961D8 /* YouTubeTextItem.m in Sources */,
 				D240A8EC14B1099D00B5FF9F /* AudioPlayer.m in Sources */,
 				D240A8F014B10A7200B5FF9F /* AudioStreamer.m in Sources */,
+				D27D4B4B14B4F63100C02C78 /* UINavigationBar+StyleHaxx.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -978,16 +976,21 @@
 		D2147D9D1460947500966BF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "walkincoma/Walk in Coma-Prefix.pch";
-				INFOPLIST_FILE = "walkincoma/Walk in Coma-Info.plist";
+				GCC_PREFIX_HEADER = "walkincoma/Walk In Coma-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "walkincoma/Walk In Coma-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = (
 					"-licucore",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "Walk in Coma";
+				PRODUCT_NAME = "Walk In Coma";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -996,16 +999,21 @@
 		D2147D9E1460947500966BF6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "walkincoma/Walk in Coma-Prefix.pch";
-				INFOPLIST_FILE = "walkincoma/Walk in Coma-Info.plist";
+				GCC_PREFIX_HEADER = "walkincoma/Walk In Coma-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "walkincoma/Walk In Coma-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_LDFLAGS = (
 					"-licucore",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "Walk in Coma";
+				PRODUCT_NAME = "Walk In Coma";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1014,7 +1022,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D2147D791460947500966BF6 /* Build configuration list for PBXProject "Walk in Coma" */ = {
+		D2147D791460947500966BF6 /* Build configuration list for PBXProject "Walk In Coma" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D2147D9A1460947500966BF6 /* Debug */,
@@ -1023,7 +1031,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D2147D9C1460947500966BF6 /* Build configuration list for PBXNativeTarget "Walk in Coma" */ = {
+		D2147D9C1460947500966BF6 /* Build configuration list for PBXNativeTarget "Walk In Coma" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D2147D9D1460947500966BF6 /* Debug */,

@@ -7,7 +7,7 @@
 //
 #import "TTTableViewDelegate+URLAdditions.h"
 @interface NewsView : TTTableViewController <TTTabDelegate> {
-    TTTabStrip* _listTabs;
+    TTTabBar* _listTabs;
 }
 
 @end

@@ -18,7 +18,7 @@
 
 - (id)initWithFeedUrl:(NSString*)feedUrl {
 	if ((self = [super init])) {
-		_feedModel = [[FeedModel alloc] initWithFeedUrl:feedUrl];
+		_feedModel = [[FeedModel alloc] initWithYoutubeUrl:feedUrl];
 	}
 	return self;
 }
@@ -46,8 +46,12 @@
 	NSMutableArray* items = [[NSMutableArray alloc] init];
 
 	for (FeedItem* item in _feedModel.items) {
+        //NSLog(@"%@", item.thumb);
 		[items addObject:[YoutubeTextItem itemWithText:item.title url:item.link]];
-	}
+        /*[items addObject:[TTTableImageItem itemWithText:item.title 
+                                               imageURL:item.thumb
+                                                    URL:item.link]];*/
+    }
 	self.items = items;
 	TT_RELEASE_SAFELY(items);
 }

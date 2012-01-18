@@ -56,7 +56,7 @@ NSComparisonResult dateSort(NSString *s1, NSString *s2, void *context) {
         NSDateFormatter* fmt1 = [[NSDateFormatter alloc] init];
         [fmt1 setDateFormat:@"MM/yyyy"];
         NSString* headerDate = [fmt1 stringFromDate: item.posted];
-        
+        [fmt1 release];
         NSMutableArray* section = [groups objectForKey:headerDate];
         if (!section) {
             section = [NSMutableArray array];

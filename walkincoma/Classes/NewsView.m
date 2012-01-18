@@ -11,9 +11,6 @@
 #import <Three20UI/UIViewAdditions.h>
 #import "TTTableViewDelegate+URLAdditions.h"
 
-static NSString* kLoremIpsum = @"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do\
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud\
-exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -27,7 +24,7 @@ exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
         UIImage* image = [[UIImage imageNamed:@"News.png"] autorelease];
         self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"News",nil) image:image tag:0] autorelease];
         CGRect applicationFrame = [UIScreen mainScreen].applicationFrame;
-        _listTabs = [[TTTabStrip alloc] initWithFrame:CGRectMake(0, _listTabs.bottom, applicationFrame.size.width, 40)];
+        _listTabs = [[TTTabBar alloc] initWithFrame:CGRectMake(0, _listTabs.bottom, applicationFrame.size.width, 40)];
         _listTabs.tabItems = [NSArray arrayWithObjects:
                               [[[TTTabItem alloc] initWithTitle:NSLocalizedString(@"News",nil)] autorelease],
                               [[[TTTabItem alloc] initWithTitle:NSLocalizedString(@"Shows",nil)] autorelease],
