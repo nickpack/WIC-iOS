@@ -97,7 +97,7 @@
     
 	[self destroyStreamer];
     
-	NSURL *url = [NSURL URLWithString:@"http://stream.walkincoma.co.uk:9000"];
+	NSURL *url = [NSURL URLWithString:@"http://tyr.nickpack.com:9000"];
 	streamer = [[AudioStreamer alloc] initWithURL:url];
     [[NSNotificationCenter defaultCenter]
 	 addObserver:self

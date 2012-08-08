@@ -13,13 +13,16 @@
 	NSString* _feedUrl;
 	NSArray*  _items;
     BOOL      _youTube;
+    BOOL      _isJSON;
 }
 
 @property (nonatomic)           BOOL      youTube;
+@property (nonatomic)           BOOL      isJSON;
 @property (nonatomic, copy)     NSString* feedUrl;
 @property (nonatomic, readonly) NSArray*  items;
 
 - (id)initWithFeedUrl:(NSString*)feedUrl;
 - (id)initWithYoutubeUrl:(NSString*)feedUrl;
+- (id)initWithJSONUrl:(NSString*)JSONUrl;
 
 @end

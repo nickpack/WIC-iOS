@@ -1,10 +1,10 @@
-//
-//  NewsDataSource.m
-//  TNWLM2
-//
-//  Created by Nick Pack on 23/12/2010.
-//  Copyright 2010 Nikki James Pack. All rights reserved.
-//
+    //
+    //  NewsDataSource.m
+    //  TNWLM2
+    //
+    //  Created by Nick Pack on 23/12/2010.
+    //  Copyright 2010 Nikki James Pack. All rights reserved.
+    //
 
 #import "NewsDataSource.h"
 #import "FeedModel.h"
@@ -19,13 +19,21 @@
 	if ((self = [super init])) {
 		_feedModel = [[FeedModel alloc] initWithFeedUrl:feedUrl];
 	}
+    
+	return self;
+}
 
+- (id)initWithJSONUrl:(NSString*)feedUrl {
+	if ((self = [super init])) {
+		_feedModel = [[FeedModel alloc] initWithJSONUrl:feedUrl];
+	}
+    
 	return self;
 }
 
 - (void)dealloc {
 	TT_RELEASE_SAFELY(_feedModel);
-
+    
 	[super dealloc];
 }
 
@@ -76,8 +84,8 @@ NSComparisonResult dateSort(NSString *s1, NSString *s2, void *context) {
 		NSString* body = [item.description stringByRemovingHTMLTags];
 		body = [body stringByReplacingOccurrencesOfString:@"\n" withString:@""];
 		row = [TTTableMessageItem itemWithTitle:item.title caption:[NSString stringWithFormat:@"Posted by: %@",item.poster]
-																	text:body timestamp:item.posted
-																imageURL:avatarUrl URL:@"wic://viewnews"];
+                                           text:body timestamp:item.posted
+                                       imageURL:avatarUrl URL:@"wic://viewnews"];
 		NSDictionary* rowInfo = [NSDictionary dictionaryWithObjectsAndKeys:
 								 item.title,
 								 @"title",
@@ -111,7 +119,7 @@ NSComparisonResult dateSort(NSString *s1, NSString *s2, void *context) {
     }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString*)titleForLoading:(BOOL)reloading {
     if (reloading) {
         return NSLocalizedString(@"Updating Feed...", @"News feed updating text");
@@ -121,13 +129,13 @@ NSComparisonResult dateSort(NSString *s1, NSString *s2, void *context) {
 }
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString*)titleForEmpty {
     return NSLocalizedString(@"No articles found.", @"News feed no results");
 }
 
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString*)subtitleForError:(NSError*)error {
     return NSLocalizedString(@"Sorry, there was an error loading the Feed.", @"");
 }

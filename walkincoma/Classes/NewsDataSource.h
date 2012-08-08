@@ -15,6 +15,7 @@
 }
 
 - (id)initWithFeedUrl:(NSString*)feedUrl;
+- (id)initWithJSONUrl:(NSString*)feedUrl;
 NSComparisonResult dateSort(NSString *s1, NSString *s2, void *context);
 
 @end
