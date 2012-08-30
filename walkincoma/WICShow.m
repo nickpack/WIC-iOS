@@ -7,7 +7,60 @@
 //
 
 #import "WICShow.h"
+#import "WICAPIClient.h"
 
-@implementation WICShow
+@implementation WICShow {
+    @private
+    __strong NSString* _title;
+    __strong NSString* _location;
+    __strong NSString* _venuePic;
+    __strong NSString* _eventInfo;
+    __strong NSString* _otherBands;
+    __strong NSDate* _startTime;
+    __strong NSDate* _endTime;
+}
+
+@synthesize title = _title;
+@synthesize location = _location;
+@synthesize venuePic = _venuePic;
+@synthesize eventInfo = _eventInfo;
+@synthesize otherBands = _otherBands;
+@synthesize startTime = _startTime;
+@synthesize endTime = _endTime;
+
+- (id)initWithAttributes:(NSDictionary *)attributes{
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    
+    _title = [attributes valueForKeyPath:@"title"];
+    
+    
+    return self;
+}
+
++ (void)showsWithBlock:(void (^)(NSArray *shows))block {
+    [[WICAPIClient sharedClient] getPath:@"live" parameters:Nil success:^(AFHTTPRequestOperation *operation, id JSON) {
+        NSMutableArray *mutableShows = [NSMutableArray arrayWithCapacity:[JSON count]];
+        for (NSDictionary *attributes in JSON) {
+            WICShow *show = [[WICShow alloc] initWithAttributes:attributes];
+            [mutableShows addObject:show];
+        }
+        
+        if (block) {
+            block([NSArray arrayWithArray:mutableShows]);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] show];
+        
+        if (block) {
+            block(nil);
+        }
+    }];
+}
+
 
 @end

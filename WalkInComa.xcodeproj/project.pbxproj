@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		622B32BF6C324003ADA2B203 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 281D8998E288472FB7F75118 /* libPods.a */; };
+		D96B28FD15EFEC370012A4BA /* WICMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D96B28FC15EFEC370012A4BA /* WICMemberViewController.m */; };
+		D96B292115EFF85E0012A4BA /* WICMemberNameAvatarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D96B292015EFF85D0012A4BA /* WICMemberNameAvatarCell.m */; };
 		D99DE19A15ED59DB005724BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99DE19915ED59DB005724BE /* UIKit.framework */; };
 		D99DE19C15ED59DB005724BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99DE19B15ED59DB005724BE /* Foundation.framework */; };
 		D99DE19E15ED59DB005724BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99DE19D15ED59DB005724BE /* CoreGraphics.framework */; };
@@ -31,11 +33,16 @@
 		D9E5F2DA15EF8FA900FFB15E /* WICBandMember.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E5F2D915EF8FA900FFB15E /* WICBandMember.m */; };
 		D9E5F2DE15EF96AD00FFB15E /* WICMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E5F2DD15EF96AD00FFB15E /* WICMembersViewController.m */; };
 		D9E5F2E515EF98AA00FFB15E /* WICShow.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E5F2E415EF98AA00FFB15E /* WICShow.m */; };
+		D9E5F2EF15EF9C1A00FFB15E /* WICMemberListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E5F2EE15EF9C1A00FFB15E /* WICMemberListCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		281D8998E288472FB7F75118 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3BF33124D344F586B46256 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D96B28FB15EFEC370012A4BA /* WICMemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WICMemberViewController.h; sourceTree = "<group>"; };
+		D96B28FC15EFEC370012A4BA /* WICMemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WICMemberViewController.m; sourceTree = "<group>"; };
+		D96B291F15EFF85D0012A4BA /* WICMemberNameAvatarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WICMemberNameAvatarCell.h; sourceTree = "<group>"; };
+		D96B292015EFF85D0012A4BA /* WICMemberNameAvatarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WICMemberNameAvatarCell.m; sourceTree = "<group>"; };
 		D99DE19515ED59DB005724BE /* WalkInComa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkInComa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99DE19915ED59DB005724BE /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D99DE19B15ED59DB005724BE /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,6 +84,8 @@
 		D9E5F2DD15EF96AD00FFB15E /* WICMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WICMembersViewController.m; sourceTree = "<group>"; };
 		D9E5F2E315EF98AA00FFB15E /* WICShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WICShow.h; sourceTree = "<group>"; };
 		D9E5F2E415EF98AA00FFB15E /* WICShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WICShow.m; sourceTree = "<group>"; };
+		D9E5F2ED15EF9C1A00FFB15E /* WICMemberListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WICMemberListCell.h; sourceTree = "<group>"; };
+		D9E5F2EE15EF9C1A00FFB15E /* WICMemberListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WICMemberListCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +246,10 @@
 			children = (
 				D9E5F29615EF67B900FFB15E /* WICMenuCell.h */,
 				D9E5F29715EF67B900FFB15E /* WICMenuCell.m */,
+				D9E5F2ED15EF9C1A00FFB15E /* WICMemberListCell.h */,
+				D9E5F2EE15EF9C1A00FFB15E /* WICMemberListCell.m */,
+				D96B291F15EFF85D0012A4BA /* WICMemberNameAvatarCell.h */,
+				D96B292015EFF85D0012A4BA /* WICMemberNameAvatarCell.m */,
 			);
 			name = "Table Cells";
 			sourceTree = "<group>";
@@ -274,6 +287,8 @@
 			children = (
 				D9E5F2DC15EF96AD00FFB15E /* WICMembersViewController.h */,
 				D9E5F2DD15EF96AD00FFB15E /* WICMembersViewController.m */,
+				D96B28FB15EFEC370012A4BA /* WICMemberViewController.h */,
+				D96B28FC15EFEC370012A4BA /* WICMemberViewController.m */,
 			);
 			name = Members;
 			sourceTree = "<group>";
@@ -403,6 +418,9 @@
 				D9E5F2DA15EF8FA900FFB15E /* WICBandMember.m in Sources */,
 				D9E5F2DE15EF96AD00FFB15E /* WICMembersViewController.m in Sources */,
 				D9E5F2E515EF98AA00FFB15E /* WICShow.m in Sources */,
+				D9E5F2EF15EF9C1A00FFB15E /* WICMemberListCell.m in Sources */,
+				D96B28FD15EFEC370012A4BA /* WICMemberViewController.m in Sources */,
+				D96B292115EFF85E0012A4BA /* WICMemberNameAvatarCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

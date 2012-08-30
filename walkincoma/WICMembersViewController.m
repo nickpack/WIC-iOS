@@ -8,6 +8,7 @@
 
 #import "WICMembersViewController.h"
 #import "WICBandMember.h"
+#import "WICMemberViewController.h"
 #import "RevealBlock.h"
 
 @interface WICMembersViewController ()
@@ -34,7 +35,6 @@
         }
     }];
 }
-
 
 #pragma mark Memory Management
 - (id)initWithTitle:(NSString *)title withRevealBlock:(RevealBlock)revealBlock {
@@ -88,23 +88,25 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    NSLog(@"Sections");
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"RowsInSection");
     return [_members count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    NSLog(@"Section Title");
-    return @"Title";
+    return @"";
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    WICBandMember *member = [_members objectAtIndex:indexPath.row];
+    UIViewController *vc = [[WICMemberViewController alloc] initWithStyle:UITableViewStyleGrouped withMember:member];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Height");
-    return 40.0f;
+    return 60.0f;
 }
 
 @end

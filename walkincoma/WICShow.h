@@ -9,5 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface WICShow : NSObject
+@property (readonly) NSString* title;
+@property (readonly) NSString* location;
+@property (readonly) NSString* venuePic;
+@property (readonly) NSString* eventInfo;
+@property (readonly) NSString* otherBands;
+@property (readonly) NSDate* startTime;
+@property (readonly) NSDate* endTime;
+
+- (id)initWithAttributes:(NSDictionary *)attributes;
++ (void)showsWithBlock:(void (^)(NSArray *shows))block;
 
 @end

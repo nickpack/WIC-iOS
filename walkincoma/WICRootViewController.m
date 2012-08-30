@@ -107,7 +107,7 @@ __strong UIActivityIndicatorView *_activityIndicatorView;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"Height");
-    return 40.0f;
+    return 80.0f;
 }
 
 @end
