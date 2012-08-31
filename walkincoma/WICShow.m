@@ -16,8 +16,8 @@
     __strong NSString* _venuePic;
     __strong NSString* _eventInfo;
     __strong NSString* _otherBands;
-    __strong NSDate* _startTime;
-    __strong NSDate* _endTime;
+    __strong NSString* _startTime;
+    __strong NSString* _endTime;
 }
 
 @synthesize title = _title;
@@ -35,7 +35,12 @@
     }
     
     _title = [attributes valueForKeyPath:@"title"];
-    
+    _location = [attributes valueForKeyPath:@"location"];
+    _venuePic = [attributes valueForKeyPath:@"venue_pic"];
+    _eventInfo = [attributes valueForKeyPath:@"event_info"];
+    _otherBands = [attributes valueForKeyPath:@"other_bands"];
+    _startTime = [attributes valueForKeyPath:@"start_date"];
+    _endTime = [attributes valueForKeyPath:@"end_date"];
     
     return self;
 }

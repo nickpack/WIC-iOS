@@ -14,5 +14,5 @@
 
 @property (nonatomic, strong) WICBandMember *member;
 
-+ (CGFloat)heightForCellWithMember:(WICBandMember *)tweet;
++ (CGFloat)heightForCellWithMember:(WICBandMember *)member;
 @end

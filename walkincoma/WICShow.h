@@ -14,8 +14,8 @@
 @property (readonly) NSString* venuePic;
 @property (readonly) NSString* eventInfo;
 @property (readonly) NSString* otherBands;
-@property (readonly) NSDate* startTime;
-@property (readonly) NSDate* endTime;
+@property (readonly) NSString* startTime;
+@property (readonly) NSString* endTime;
 
 - (id)initWithAttributes:(NSDictionary *)attributes;
 + (void)showsWithBlock:(void (^)(NSArray *shows))block;

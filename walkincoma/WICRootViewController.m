@@ -8,6 +8,7 @@
 
 #import "WICRootViewController.h"
 #import "WICNewsArticle.h"
+#import "WICNewsCell.h"
 
 @interface WICRootViewController ()
 
@@ -17,15 +18,14 @@
 @end
 
 @implementation WICRootViewController {
-@private
-NSArray *_news;
-__strong UIActivityIndicatorView *_activityIndicatorView;
+    @private
+    NSArray *_news;
+    __strong UIActivityIndicatorView *_activityIndicatorView;
 }
 
 - (void)reload:(id)sender {
     [_activityIndicatorView startAnimating];
     self.navigationItem.rightBarButtonItem.enabled = NO;
-    NSLog(@"Reload");
     [WICNewsArticle newsArticlesWithBlock:^(NSArray *news) {
         if (news) {
             _news = news;
@@ -74,40 +74,36 @@ __strong UIActivityIndicatorView *_activityIndicatorView;
 #pragma mark UITableViewDelegate
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier2 = @"Cell2";
+    static NSString *CellIdentifier2 = @"NewsCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier2];
+    WICNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier2];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier2];
+        cell = [[WICNewsCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier2];
     }
     
     WICNewsArticle *art = [_news objectAtIndex:indexPath.row];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = art.articleTitle;
-    cell.detailTextLabel.text = art.articleDate;
-    NSLog(@"%d", indexPath.row);
+    cell.article = art;
+    
+    NSLog(@"%@", art.bandMember.avatar);
+    
     return cell;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    NSLog(@"Sections");
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"RowsInSection");
     return [_news count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    NSLog(@"Section Title");
-    return @"Title";
+    return @"";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Height");
-    return 80.0f;
+    return [WICNewsCell heightForCellWithArticle:[_news objectAtIndex:indexPath.row]];
 }
 
 @end
