@@ -81,7 +81,6 @@
         
         return cell;
     } else {
-        NSLog(@"Tother one: %d", indexPath.row);
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         
         if (!cell) {
@@ -104,53 +103,48 @@
                 break;
         }
         
+        cell.detailTextLabel.adjustsFontSizeToFitWidth = NO;
+        CGRect detailTextLabelFrame = CGRectOffset(cell.textLabel.frame, 0.0f, 25.0f);
+        detailTextLabelFrame.size.width = cell.textLabel.frame.size.width + 80.0f;
+        detailTextLabelFrame.size.height = [self heightForCellWithCopy:cell.detailTextLabel.text];
+        cell.detailTextLabel.frame = detailTextLabelFrame;
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:12.0f];
+        cell.detailTextLabel.numberOfLines = 0;
+        cell.detailTextLabel.backgroundColor = [UIColor clearColor];
+        
         return cell;
     }
     
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(CGFloat) heightForCellWithCopy:(NSString*)copy {
+    CGSize sizeToFit = [copy sizeWithFont:[UIFont systemFontOfSize:12.0f]
+                             constrainedToSize:CGSizeMake(1000.0f, CGFLOAT_MAX)
+                                 lineBreakMode:UILineBreakModeWordWrap];
+    
+    return fmaxf(70.0f, sizeToFit.height + 45.0f);
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [WICMemberNameAvatarCell heightForCellWithMember:member];
+    if (indexPath.section == 0) {
+        return [WICMemberNameAvatarCell heightForCellWithMember:member];
+    } else {
+        NSString* cellText;
+        switch (indexPath.row) {
+            case 0:
+                cellText = self.member.role;
+                break;
+            case 1:
+                cellText = self.member.gear;
+                break;
+            case 2:
+                cellText = self.member.bio;
+                break;
+        }
+        
+        return [self heightForCellWithCopy:cellText];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

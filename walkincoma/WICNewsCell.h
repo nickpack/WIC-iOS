@@ -13,6 +13,7 @@
 @interface WICNewsCell : UITableViewCell
 
 @property (nonatomic, strong) WICNewsArticle *article;
+@property (nonatomic) UILabel *dateLabel;
 
 + (CGFloat)heightForCellWithArticle:(WICNewsArticle *)article;
 

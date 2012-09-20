@@ -82,9 +82,8 @@
     }
     
     WICNewsArticle *art = [_news objectAtIndex:indexPath.row];
-    cell.article = art;
     
-    NSLog(@"%@", art.bandMember.avatar);
+    cell.article = art;
     
     return cell;
 }
@@ -104,6 +103,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [WICNewsCell heightForCellWithArticle:[_news objectAtIndex:indexPath.row]];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    WICNewsArticle *article = [_news objectAtIndex:indexPath.row];
+        //UIViewController *vc = [[WICMemberViewController alloc] initWithStyle:UITableViewStyleGrouped withMember:member];
+        //[self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

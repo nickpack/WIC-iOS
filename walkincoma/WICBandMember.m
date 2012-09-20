@@ -42,6 +42,8 @@
     _avatar = [attributes valueForKeyPath:@"avatar"];
     _nickname = [attributes valueForKeyPath:@"nickname"];
     
+    NSLog(@"%@", _avatar);
+    
     return self;
 }
 
