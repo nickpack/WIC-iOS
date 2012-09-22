@@ -41,9 +41,7 @@
     _role = [attributes valueForKeyPath:@"role_in_band"];
     _avatar = [attributes valueForKeyPath:@"avatar"];
     _nickname = [attributes valueForKeyPath:@"nickname"];
-    
-    NSLog(@"%@", _avatar);
-    
+   
     return self;
 }
 
@@ -59,8 +57,6 @@
             block([NSArray arrayWithArray:mutableMembers]);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-        
         [[[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] show];
         
         if (block) {

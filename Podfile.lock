@@ -1,8 +1,21 @@
-PODS:
-  - AFHTTPRequestOperationLogger (0.9.0):
-    - AFNetworking (>= 0.9.0)
-  - AFNetworking (1.0RC1)
 
-DEPENDENCIES:
-  - AFHTTPRequestOperationLogger
-  - AFNetworking
+SPEC CHECKSUMS: 
+  GMGridView: 6ef84c7fb99a2b28dc6fb2ddd36a8ef96360fa5e
+  AFNetworking: e9e0911a6afd846691672a4d832fb531e8bae72f
+  PrettyKit: 44b8f06f3719579880d2e11cd6498b7464b3b0fa
+  AFHTTPRequestOperationLogger: ed62e8c2c4c307c3f4b530c2a18464747aab5977
+
+DEPENDENCIES: 
+- AFHTTPRequestOperationLogger
+- AFNetworking (= 1.0)
+- GMGridView
+- PrettyKit
+
+COCOAPODS: 0.14.0
+
+PODS: 
+- AFHTTPRequestOperationLogger (0.9.0): 
+  - AFNetworking (>= 0.9.0)
+- AFNetworking (1.0)
+- GMGridView (1.1.1)
+- PrettyKit (0.2.0)

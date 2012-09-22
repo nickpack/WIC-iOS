@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		622B32BF6C324003ADA2B203 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 281D8998E288472FB7F75118 /* libPods.a */; };
+		20AF44229ADE432696DD6B63 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3305A30E4A4C2A98D21A2A /* libPods.a */; };
+		D9697287160C786000A0C39C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9697286160C786000A0C39C /* Default-568h@2x.png */; };
+		D969728E160C9C0400A0C39C /* WICPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D969728D160C9C0400A0C39C /* WICPhotosViewController.m */; };
+		D9697292160CCAA200A0C39C /* WICPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = D9697291160CCAA200A0C39C /* WICPhoto.m */; };
+		D9697295160CCC9800A0C39C /* WICFlickrAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D9697294160CCC9800A0C39C /* WICFlickrAPIClient.m */; };
 		D96B28FD15EFEC370012A4BA /* WICMemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D96B28FC15EFEC370012A4BA /* WICMemberViewController.m */; };
 		D96B292115EFF85E0012A4BA /* WICMemberNameAvatarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D96B292015EFF85D0012A4BA /* WICMemberNameAvatarCell.m */; };
 		D995209215F0A0A00011DA95 /* WICNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D995209115F0A0A00011DA95 /* WICNewsCell.m */; };
@@ -38,8 +42,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		281D8998E288472FB7F75118 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD3BF33124D344F586B46256 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		1E3305A30E4A4C2A98D21A2A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A88133962274FCF8597AE53 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D9697286160C786000A0C39C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D969728C160C9C0400A0C39C /* WICPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WICPhotosViewController.h; sourceTree = "<group>"; };
+		D969728D160C9C0400A0C39C /* WICPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WICPhotosViewController.m; sourceTree = "<group>"; };
+		D9697290160CCAA200A0C39C /* WICPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WICPhoto.h; sourceTree = "<group>"; };
+		D9697291160CCAA200A0C39C /* WICPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WICPhoto.m; sourceTree = "<group>"; };
+		D9697293160CCC9800A0C39C /* WICFlickrAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WICFlickrAPIClient.h; sourceTree = "<group>"; };
+		D9697294160CCC9800A0C39C /* WICFlickrAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WICFlickrAPIClient.m; sourceTree = "<group>"; };
 		D96B28FB15EFEC370012A4BA /* WICMemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WICMemberViewController.h; sourceTree = "<group>"; };
 		D96B28FC15EFEC370012A4BA /* WICMemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WICMemberViewController.m; sourceTree = "<group>"; };
 		D96B291F15EFF85D0012A4BA /* WICMemberNameAvatarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WICMemberNameAvatarCell.h; sourceTree = "<group>"; };
@@ -70,7 +81,7 @@
 		D9E5F2A515EF689200FFB15E /* searchBarIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchBarIcon@2x.png"; sourceTree = "<group>"; };
 		D9E5F2A615EF689200FFB15E /* searchTextBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchTextBG.png; sourceTree = "<group>"; };
 		D9E5F2A715EF689200FFB15E /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
-		D9E5F2AF15EF69C700FFB15E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D9E5F2AF15EF69C700FFB15E /* QuartzCore.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D9E5F2B115EF69F800FFB15E /* NSObject+Subscripts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Subscripts.h"; path = "../NSObject+Subscripts.h"; sourceTree = "<group>"; };
 		D9E5F2B315EF6FA900FFB15E /* WICRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WICRootViewController.h; sourceTree = "<group>"; };
 		D9E5F2B415EF6FA900FFB15E /* WICRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WICRootViewController.m; sourceTree = "<group>"; };
@@ -100,20 +111,53 @@
 				D99DE19A15ED59DB005724BE /* UIKit.framework in Frameworks */,
 				D99DE19C15ED59DB005724BE /* Foundation.framework in Frameworks */,
 				D99DE19E15ED59DB005724BE /* CoreGraphics.framework in Frameworks */,
-				622B32BF6C324003ADA2B203 /* libPods.a in Frameworks */,
+				20AF44229ADE432696DD6B63 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D9697289160C92CD00A0C39C /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Videos;
+			sourceTree = "<group>";
+		};
+		D969728A160C92DF00A0C39C /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Videos;
+			sourceTree = "<group>";
+		};
+		D969728B160C9BDA00A0C39C /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				D969728C160C9C0400A0C39C /* WICPhotosViewController.h */,
+				D969728D160C9C0400A0C39C /* WICPhotosViewController.m */,
+			);
+			name = Photos;
+			sourceTree = "<group>";
+		};
+		D969728F160CCA8900A0C39C /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				D9697290160CCAA200A0C39C /* WICPhoto.h */,
+				D9697291160CCAA200A0C39C /* WICPhoto.m */,
+			);
+			name = Photos;
+			sourceTree = "<group>";
+		};
 		D99DE18A15ED59DB005724BE = {
 			isa = PBXGroup;
 			children = (
+				D9697286160C786000A0C39C /* Default-568h@2x.png */,
 				D99DE19F15ED59DB005724BE /* WalkInComa */,
 				D99DE19815ED59DB005724BE /* Frameworks */,
 				D99DE19615ED59DB005724BE /* Products */,
-				CD3BF33124D344F586B46256 /* Pods.xcconfig */,
+				2A88133962274FCF8597AE53 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,7 +176,7 @@
 				D99DE19915ED59DB005724BE /* UIKit.framework */,
 				D99DE19B15ED59DB005724BE /* Foundation.framework */,
 				D99DE19D15ED59DB005724BE /* CoreGraphics.framework */,
-				281D8998E288472FB7F75118 /* libPods.a */,
+				1E3305A30E4A4C2A98D21A2A /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,6 +265,8 @@
 			children = (
 				D9E5F2C415EF800600FFB15E /* WICAPIClient.h */,
 				D9E5F2C515EF800600FFB15E /* WICAPIClient.m */,
+				D9697293160CCC9800A0C39C /* WICFlickrAPIClient.h */,
+				D9697294160CCC9800A0C39C /* WICFlickrAPIClient.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -228,6 +274,8 @@
 		D9E5F2D115EF8F1500FFB15E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D969728B160C9BDA00A0C39C /* Photos */,
+				D969728A160C92DF00A0C39C /* Videos */,
 				D9E5F2DB15EF969500FFB15E /* Members */,
 				D9E5F29515EF679C00FFB15E /* Menu */,
 				D9E5F2B215EF6F9B00FFB15E /* News */,
@@ -262,6 +310,8 @@
 		D9E5F2D515EF8F6100FFB15E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D969728F160CCA8900A0C39C /* Photos */,
+				D9697289160C92CD00A0C39C /* Videos */,
 				D9E5F2E215EF989100FFB15E /* Shows */,
 				D9E5F2D715EF8F9100FFB15E /* Members */,
 				D9E5F2D615EF8F6700FFB15E /* News */,
@@ -335,6 +385,8 @@
 				D99DE19215ED59DB005724BE /* Frameworks */,
 				D99DE19315ED59DB005724BE /* Resources */,
 				A6B40833E0374BF9973B214F /* Copy Pods Resources */,
+				356C305207814C4988C01A54 /* Copy Pods Resources */,
+				6E3389E0EE9C4D93B49A082E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -383,12 +435,41 @@
 				D9E5F2AC15EF689200FFB15E /* searchBarIcon@2x.png in Resources */,
 				D9E5F2AD15EF689200FFB15E /* searchTextBG.png in Resources */,
 				D9E5F2AE15EF689200FFB15E /* user.png in Resources */,
+				D9697287160C786000A0C39C /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		356C305207814C4988C01A54 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		6E3389E0EE9C4D93B49A082E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 		A6B40833E0374BF9973B214F /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,6 +508,9 @@
 				D96B28FD15EFEC370012A4BA /* WICMemberViewController.m in Sources */,
 				D96B292115EFF85E0012A4BA /* WICMemberNameAvatarCell.m in Sources */,
 				D995209215F0A0A00011DA95 /* WICNewsCell.m in Sources */,
+				D969728E160C9C0400A0C39C /* WICPhotosViewController.m in Sources */,
+				D9697292160CCAA200A0C39C /* WICPhoto.m in Sources */,
+				D9697295160CCC9800A0C39C /* WICFlickrAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,26 +579,28 @@
 		};
 		D99DE1AE15ED59DC005724BE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD3BF33124D344F586B46256 /* Pods.xcconfig */;
+			baseConfigurationReference = 2A88133962274FCF8597AE53 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WalkInComa/WalkInComa-Prefix.pch";
 				INFOPLIST_FILE = "WalkInComa/WalkInComa-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		D99DE1AF15ED59DC005724BE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD3BF33124D344F586B46256 /* Pods.xcconfig */;
+			baseConfigurationReference = 2A88133962274FCF8597AE53 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WalkInComa/WalkInComa-Prefix.pch";
 				INFOPLIST_FILE = "WalkInComa/WalkInComa-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

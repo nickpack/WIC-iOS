@@ -11,9 +11,11 @@
 #import "WICRootViewController.h"
 #import "WICShowsViewController.h"
 #import "WICMembersViewController.h"
+#import "WICPhotosViewController.h"
 #import "GHRevealViewController.h"
 #import "WICMenuViewController.h"
 #import "AFHTTPRequestOperationLogger.h"
+#import "PrettyKit.h"
 
 @interface WICAppDelegate ()
 @property (nonatomic, strong) GHRevealViewController *revealController;
@@ -30,7 +32,7 @@
 	[[AFHTTPRequestOperationLogger sharedLogger] startLogging];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
 	
-	UIColor *bgColor = [UIColor colorWithRed:(50.0f/255.0f) green:(57.0f/255.0f) blue:(74.0f/255.0f) alpha:1.0f];
+	UIColor *bgColor = [UIColor colorWithRed:(42.0f/255.0f) green:(42.0f/255.0f) blue:(42.0f/255.0f) alpha:1.0f];
 	self.revealController = [[GHRevealViewController alloc] initWithNibName:nil bundle:nil];
 	self.revealController.view.backgroundColor = bgColor;
 	
@@ -50,8 +52,7 @@
     [[UINavigationController alloc] initWithRootViewController:[[WICRootViewController alloc] initWithTitle:@"News" withRevealBlock:revealBlock]]
     ],
     @[
-    [[UINavigationController alloc] initWithRootViewController:[[WICShowsViewController alloc] initWithTitle:@"Upcoming Shows" withRevealBlock:revealBlock withShowType:1]],
-    [[UINavigationController alloc] initWithRootViewController:[[WICShowsViewController alloc] initWithTitle:@"Previous Shows" withRevealBlock:revealBlock withShowType:1]],
+    [[UINavigationController alloc] initWithRootViewController:[[WICShowsViewController alloc] initWithTitle:@"Live Shows" withRevealBlock:revealBlock withShowType:1]],
     ],
     @[
     [[UINavigationController alloc] initWithRootViewController:[[WICShowsViewController alloc] initWithTitle:@"Biography" withRevealBlock:revealBlock withShowType:1]],
@@ -59,7 +60,7 @@
     ],
     @[
     [[UINavigationController alloc] initWithRootViewController:[[WICShowsViewController alloc] initWithTitle:@"Discography" withRevealBlock:revealBlock withShowType:1]],
-    [[UINavigationController alloc] initWithRootViewController:[[WICShowsViewController alloc] initWithTitle:@"Photos" withRevealBlock:revealBlock withShowType:1]],
+    [[UINavigationController alloc] initWithRootViewController:[[WICPhotosViewController alloc] initWithTitle:@"Photos" withRevealBlock:revealBlock]],
     [[UINavigationController alloc] initWithRootViewController:[[WICShowsViewController alloc] initWithTitle:@"Videos" withRevealBlock:revealBlock withShowType:1]],
     ]
 	];
@@ -68,8 +69,7 @@
     @{kSidebarCellImageKey: [UIImage imageNamed:@"user.png"], kSidebarCellTextKey: NSLocalizedString(@"News", @"")}
     ],
     @[
-    @{kSidebarCellImageKey: [UIImage imageNamed:@"user.png"], kSidebarCellTextKey: NSLocalizedString(@"Upcoming Shows", @"")},
-    @{kSidebarCellImageKey: [UIImage imageNamed:@"user.png"], kSidebarCellTextKey: NSLocalizedString(@"Previous Shows", @"")},
+    @{kSidebarCellImageKey: [UIImage imageNamed:@"user.png"], kSidebarCellTextKey: NSLocalizedString(@"Live Shows", @"")},
     ],
     @[
     @{kSidebarCellImageKey: [UIImage imageNamed:@"user.png"], kSidebarCellTextKey: NSLocalizedString(@"Biography", @"")},
@@ -88,6 +88,7 @@
 			UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self.revealController
 																						 action:@selector(dragContentView:)];
 			panGesture.cancelsTouchesInView = YES;
+            
 			[((UINavigationController *)obj2).navigationBar addGestureRecognizer:panGesture];
 		}];
 	}];

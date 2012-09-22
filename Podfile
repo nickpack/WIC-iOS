@@ -1,3 +1,5 @@
 platform :ios
-dependency 'AFNetworking'
-dependency 'AFHTTPRequestOperationLogger'
+pod 'AFNetworking',     '1.0' 
+pod 'AFHTTPRequestOperationLogger'
+pod 'GMGridView'
+pod 'PrettyKit'

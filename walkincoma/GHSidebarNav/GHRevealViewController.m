@@ -12,7 +12,7 @@
 #pragma mark -
 #pragma mark Constants
 const NSTimeInterval kGHRevealSidebarDefaultAnimationDuration = 0.25;
-const CGFloat kGHRevealSidebarWidth = 260.0f;
+const CGFloat kGHRevealSidebarWidth = 230.0f;
 const CGFloat kGHRevealSidebarFlickVelocity = 1000.0f;
 
 

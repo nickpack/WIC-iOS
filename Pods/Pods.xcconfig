@@ -1,7 +1,7 @@
-PODS_PUBLIC_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AFHTTPRequestOperationLogger" "${PODS_ROOT}/Headers/AFNetworking"
-OTHER_LDFLAGS = -ObjC -framework SystemConfiguration
+PODS_BUILD_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/AFHTTPRequestOperationLogger" "${PODS_ROOT}/BuildHeaders/AFNetworking" "${PODS_ROOT}/BuildHeaders/GMGridView" "${PODS_ROOT}/BuildHeaders/PrettyKit"
 PODS_HEADERS_SEARCH_PATHS = ${PODS_PUBLIC_HEADERS_SEARCH_PATHS}
 PODS_ROOT = ${SRCROOT}/Pods
+OTHER_LDFLAGS = -ObjC -framework CoreGraphics -framework QuartzCore -framework SystemConfiguration -framework UIKit
 ALWAYS_SEARCH_USER_PATHS = YES
+PODS_PUBLIC_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/AFHTTPRequestOperationLogger" "${PODS_ROOT}/Headers/AFNetworking" "${PODS_ROOT}/Headers/GMGridView" "${PODS_ROOT}/Headers/PrettyKit"
 HEADER_SEARCH_PATHS = ${PODS_HEADERS_SEARCH_PATHS}
-PODS_BUILD_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/AFHTTPRequestOperationLogger" "${PODS_ROOT}/BuildHeaders/AFNetworking"
